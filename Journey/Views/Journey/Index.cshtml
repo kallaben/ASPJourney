@@ -1,4 +1,5 @@
-﻿
+﻿@model Journey.Models.Habit[]
+
 @{
     ViewBag.Title = "Index";
 }
@@ -20,29 +21,18 @@
     </div>
     <div class="wrapper">
         <div class="habit-overview clearfix">
-            <div class="habit">
-                <h2 class="habit-name">Go for a run</h2>
-                <button class="task-completed"></button>
-                <p class="count">5 in a row</p>
-            </div>
-            <div class="habit">
-                <div class="habit-top">
-                    <h2 class="habit-name">Study</h2>
-                    <button class="task-completed"></button>
+            @foreach (var habit in Model)
+            {
+                <div class="habit">
+                    <div class="habit-top">
+                        <h2 class="habit-name">@habit.Name</h2>
+                        <button class="task-completed"></button>
+                    </div>
+                    <div class="habit-bottom">
+                        <p class="count">@habit.DayCount in a row</p>
+                    </div>
                 </div>
-                <div class="habit-bottom">
-                    <p class="count">5 in a row</p>
-                </div>
-            </div>
-            <div class="habit">
-                <div class="habit-top">
-                    <h2 class="habit-name">Gym</h2>
-                    <button class="task-completed"></button>
-                </div>
-                <div class="habit-bottom">
-                    <p class="count">5 in a row</p>
-                </div>
-            </div>
+            }
         </div>
     </div>
     <footer class="main-footer">
