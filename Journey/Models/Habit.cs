@@ -10,15 +10,17 @@ namespace Journey.Models
         static int globalId = 1;
         private int _id;
         private string _name;
-        private bool _completed;
+        private bool _completed = false;
         private int _dayCount = 0;
+        private string _interval;
 
-        public Habit(string name)
+
+        public Habit()
         {
-            _name = name;
-            _completed = false;
+            //_name = name;
             _id = globalId;
             globalId++;
+            //_interval = interval;
         }
 
         public bool Completed
@@ -31,6 +33,12 @@ namespace Journey.Models
         {
             get { return _name; }
             set { _name = value; }
+        }
+
+        public string Interval
+        {
+            get { return _interval; }
+            set { _interval = value; }
         }
 
         public int DayCount { get { return _dayCount; } }

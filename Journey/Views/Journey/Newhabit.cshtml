@@ -1,4 +1,4 @@
-﻿@model Journey.Models.Habit[]
+﻿@model Journey.Models.Habit
 
 @{
     ViewBag.Title = "Newhabit";
@@ -10,29 +10,30 @@
 <div class="content">
     <div class="sider-element"></div>
     <div class="container">
-        <form id="create-habit" method="post">
+        @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "create-habit" }))
+        {
             <h1 class="page-title">New habit</h1>
 
-            <label class="label" for="name">Habit name:</label>
-            <input class="text-input" type="text" id="name" name="habit_name" value="@ViewBag.Name">
+            @Html.LabelFor(m => m.Name, new { @class = "label"})
+            @Html.TextBoxFor(m => m.Name, new { @class = "text-input"})
 
             <label class="label" for="interval">Interval:</label>
             <div class="radio-button-list">
                 <label class="radio-button">
-                    <div class="button-text"><input class="js-button" type="radio" id="daily" value="daily" name="habit_interval"><span class="radio-label">Daily</span></div>
+                    <div class="button-text">@Html.RadioButtonFor(m => m.Interval, "daily", new { @class = "js-button" })<span class="radio-label">Daily</span></div>
                 </label>
                 <label class="radio-button">
-                    <div class="button-text"><input class="js-button" type="radio" id="weekly" value="weekly" name="habit_interval"><span class="radio-label">Weekly</span></div>
+                    <div class="button-text">@Html.RadioButtonFor(m => m.Interval, "weekly", new { @class = "js-button" })<span class="radio-label">Weekly</span></div>
                 </label>
                 <label class="radio-button">
-                    <div class="button-text"><input class="js-button" type="radio" id="monthly" value="monthly" name="habit_interval"><span class="radio-label">Monthly</span></div>
+                    <div class="button-text">@Html.RadioButtonFor(m => m.Interval, "monthly", new { @class = "js-button" })<span class="radio-label">Monthly</span></div>
                 </label>
                 <label class="radio-button">
-                    <div class="button-text"><input class="js-button" type="radio" id="custom" value="custom" name="habit_interval"><span class="radio-label">Custom</span></div>
+                    <div class="button-text">@Html.RadioButtonFor(m => m.Interval, "custom", new { @class = "js-button" })<span class="radio-label">Custom</span></div>
                 </label>
             </div>
             <button id="submit-button" type="submit"><img src="~/Images/checkmark.svg"></button>
-        </form>
+        }
     </div>
 </div>
 

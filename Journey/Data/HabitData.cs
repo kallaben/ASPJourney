@@ -8,25 +8,12 @@ namespace Journey.Data
 {
     public class HabitData
     {
-        private static Habit[] _habits = new Habit[]
+        private static List<Habit> _habits = new List<Habit>
         {
-            new Habit("Go for a run")
-            {
-                Completed = false
-            },
-      
-            new Habit("Study")
-            {
-                Completed = true
-            },
-
-            new Habit("Meditate")
-            {
-                Completed = true
-            }
+            new Habit{Name = "Go for a run", Interval = "daily" },
         };
 
-        public Habit[] GetHabits()
+        public List<Habit> GetHabits()
         {
             return _habits;
         }
@@ -43,6 +30,11 @@ namespace Journey.Data
                 }
             }
             return habitToReturn;
+        }
+
+        public void AddHabit(Habit habit)
+        {
+            _habits.Add(habit);
         }
     }
 }
