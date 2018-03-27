@@ -1,0 +1,39 @@
+﻿@model Journey.Models.Habit[]
+
+@{
+    ViewBag.Title = "Newhabit";
+}
+<head>
+    <link href="~/Content/newhabit.css" rel="stylesheet" />
+</head>
+
+<div class="content">
+    <div class="sider-element"></div>
+    <div class="container">
+        <form id="create-habit" method="post">
+            <h1 class="page-title">New habit</h1>
+
+            <label class="label" for="name">Habit name:</label>
+            <input class="text-input" type="text" id="name" name="habit_name" value="@ViewBag.Name">
+
+            <label class="label" for="interval">Interval:</label>
+            <div class="radio-button-list">
+                <label class="radio-button">
+                    <div class="button-text"><input class="js-button" type="radio" id="daily" value="daily" name="habit_interval"><span class="radio-label">Daily</span></div>
+                </label>
+                <label class="radio-button">
+                    <div class="button-text"><input class="js-button" type="radio" id="weekly" value="weekly" name="habit_interval"><span class="radio-label">Weekly</span></div>
+                </label>
+                <label class="radio-button">
+                    <div class="button-text"><input class="js-button" type="radio" id="monthly" value="monthly" name="habit_interval"><span class="radio-label">Monthly</span></div>
+                </label>
+                <label class="radio-button">
+                    <div class="button-text"><input class="js-button" type="radio" id="custom" value="custom" name="habit_interval"><span class="radio-label">Custom</span></div>
+                </label>
+            </div>
+            <button id="submit-button" type="submit"><img src="~/Images/checkmark.svg"></button>
+        </form>
+    </div>
+</div>
+
+<script src="~/Scripts/selection_color.js"></script>

@@ -89,16 +89,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\home.css" />
     <Content Include="Content\main.css" />
+    <Content Include="Content\newhabit.css" />
     <Content Include="Content\normalize.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Images\bars.svg" />
+    <Content Include="Images\checkmark.svg" />
+    <Content Include="Images\home.svg" />
+    <Content Include="Images\leaf.svg" />
+    <Content Include="Images\logo.svg" />
+    <Content Include="Images\plus.svg" />
+    <Content Include="Images\profile_pic.jpg" />
+    <Content Include="Images\users.svg" />
+    <Content Include="Scripts\selection_color.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -118,7 +123,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
     <Content Include="Views\Journey\Index.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Journey\Newhabit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -128,7 +135,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

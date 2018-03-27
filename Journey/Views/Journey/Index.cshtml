@@ -3,43 +3,32 @@
 @{
     ViewBag.Title = "Index";
 }
-
 <head>
-    <link href="/content/normalize.css" rel="stylesheet" />
-    <link href="/content/main.css" rel="stylesheet" />
-    <title>Journey</title>
+    <link href="~/Content/home.css" rel="stylesheet" />
 </head>
 
-<body>
-    <div class="sider">
-        <div class="new-habit"><h5 class="plus"><a>+</a></h5></div>
-        <ul class="main-menu">
-            <li>Home</li>
-            <li>Friends</li>
-            <li>Your Journey</li>
-        </ul>
-    </div>
-    <div class="wrapper">
-        <div class="habit-overview clearfix">
+<div class="content">
+    <div class="sider-element"></div>
+    <div class="container">
+        <div class="habit-overview">
             @foreach (var habit in Model)
             {
                 <div class="habit">
-                    <div class="habit-top">
-                        <h2 class="habit-name">@habit.Name</h2>
-                        <button class="task-completed"></button>
+                    <div class="habit-left">
+                        <h5 class="habit-name">@habit.Name</h5>
+                        <p class="habit-count">@habit.DayCount in a row</p>
                     </div>
-                    <div class="habit-bottom">
-                        <p class="count">@habit.DayCount in a row</p>
+                    <div class="habit-right">
+                        <button class="habit-friends">
+                            <img class="habit-profile-pic" src="~/Images/profile_pic.jpg">
+                            <img class="habit-profile-pic" src="~/Images/profile_pic.jpg">
+                        </button>
+                        <button class="habit-stats"><img class="habit-button" src="~/Images/bars.svg"></button>
+                        <button class="habit-complete"><img class="habit-button" src="~/Images/checkmark.svg"></button>
                     </div>
                 </div>
             }
+            
         </div>
     </div>
-    <footer class="main-footer">
-        <div class="footer-shadow">
-            <span class="copyright">&copy;2018 Journey.</span>
-        </div>
-    </footer>
-
-</body>
-
+</div>

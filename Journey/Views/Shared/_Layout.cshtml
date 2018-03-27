@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/normalize.css" rel="stylesheet" />
+    <link href="~/Content/main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="sider">
+        <img class="logo" src="~/Images/logo.svg" alt="Logo">
+        <ul class="main-menu">
+            <li><a class="main-menu-button" href="@Url.Action("Index")"><img src="~/Images/home.svg" alt="Home"><span>Home</span></a></li>
+            <li><a class="main-menu-button"><img src="~/Images/users.svg" alt="Users"><span>Friends</span></a></li>
+            <li><a class="main-menu-button"><img src="~/Images/leaf.svg" alt="Journey"><span>Your Journey</span></a></li>
+        </ul>
+        <a class="new-habit" href="@Url.Action("Newhabit")">
+            <img class="plus" src="~/Images/plus.svg" alt="Plus">
+        </a>
+    </div>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer class="main-footer">
+        <span class="copyright">Journey &copy; 2018</span>
+    </footer>
+
+</body>
+
+</html>

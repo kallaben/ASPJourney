@@ -19,5 +19,17 @@ namespace Journey.Controllers
         {
             return View(_habitData.GetHabits());
         }
+
+        public ActionResult Newhabit()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Newhabit(string habit_name, string habit_interval)
+        {
+            ViewBag.Name = habit_name;
+            return View();
+        }
     }
 }
