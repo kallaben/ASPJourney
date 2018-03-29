@@ -32,6 +32,18 @@ namespace Journey.Data
             return habitToReturn;
         }
 
+        public void DeleteHabit(int id)
+        {
+            foreach (var habit in _habits)
+            {
+                if (habit.Id == id)
+                {
+                    _habits.Remove(habit);
+                    return;
+                }
+            }
+        }
+
         public void AddHabit(Habit habit)
         {
             _habits.Add(habit);

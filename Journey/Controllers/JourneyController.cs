@@ -21,6 +21,14 @@ namespace Journey.Controllers
             return View(_habitData.GetHabits());
         }
 
+        // Habit deletion
+        [HttpPost]
+        public ActionResult Index(int id)
+        {
+            _habitData.DeleteHabit(id);
+            return RedirectToAction("Index");
+        }
+
         public ActionResult Newhabit()
         {
             var newHabit = new Habit();

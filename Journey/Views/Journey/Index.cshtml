@@ -20,16 +20,34 @@
                         <p class="habit-count">@habit.DayCount in a row</p>
                     </div>
                     <div class="habit-right">
-                        <button class="habit-friends">
+                        <a class="habit-friends">
                             <img class="habit-profile-pic" src="~/Images/profile_pic.jpg">
                             <img class="habit-profile-pic" src="~/Images/profile_pic.jpg">
-                        </button>
-                        <button class="habit-stats"><img class="habit-button" src="~/Images/bars.svg"></button>
-                        <button class="habit-complete"><img class="habit-button" src="~/Images/checkmark.svg"></button>
+                        </a>
+                        <a class="habit-circle" id="delete-habit" onclick="deleteHabit(@habit.Id)"><img class="habit-button" src="~/Images/trash.svg"></a>
+                        <a class="habit-circle"><img class="habit-button" src="~/Images/bars.svg"></a>
+                        <a class="habit-complete"><img class="habit-button" src="~/Images/checkmark.svg"></a>
                     </div>
                 </div>
             }
-
         </div>
     </div>
 </div>
+
+<div id="deletion-prompt">
+    <h2 class="warning-message"></h2>
+    @using (Html.BeginForm())
+    {
+        @Html.TextBox("id", new { @type = "number" }, new { @id = "input-id" })
+        <div class="prompt-buttons">
+            <button class="prompt-button" type="submit">
+                Delete
+            </button>
+            <a class="prompt-button" href="@Url.Action("Index")">
+                Cancel
+            </a>
+        </div>
+    }
+</div>
+
+<script src="~/Scripts/delete_prompt.js"></script>

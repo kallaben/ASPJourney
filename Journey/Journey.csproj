@@ -102,6 +102,7 @@
     <Content Include="Images\plus.svg" />
     <Content Include="Images\profile_pic.jpg" />
     <Content Include="Images\users.svg" />
+    <Content Include="Scripts\delete_prompt.js" />
     <Content Include="Scripts\selection_color.js" />
     <Content Include="Web.config" />
   </ItemGroup>

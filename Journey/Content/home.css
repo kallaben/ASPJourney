@@ -32,7 +32,7 @@
     margin-left: auto;
 }
 
-.habit-right button {
+.habit-right a {
     padding: 5px;
     border: 1px solid rgb(221, 223, 226);
     background-color: rgb(104, 212, 108);
@@ -59,17 +59,18 @@
     margin: 0 3px;
 }
 
-.habit-stats {
+.habit-circle {
     align-self: flex-end;
     width: 35px;
     height: 35px;
     border-radius: 50%;
 }
 
-.habit-stats img {
+.habit-circle img {
     width: 17px;
     height: 17px;
     margin: auto;
+    margin-top: 3px;
 }
 
 .habit-complete {
@@ -84,6 +85,36 @@
     margin: auto;
 }
 
+/* JS Deletion prompt */
+#deletion-prompt {
+    position: fixed;
+    width: 90%;
+    height: 150px;
+    top: 18%;
+    left: 50%;
+    margin-top: -75px; /* Negative half of height. */
+    margin-left: -45%; /* Negative half of width. */
+    background-color: rgba(104, 212, 108, 0.8);
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+}
+
+#input-id {
+    display: none;
+}
+
+.prompt-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.prompt-button {
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 5px;
+}
+
 /* Media Queries */
 @media (min-width: 769px) {
     .habit-overview {
@@ -96,4 +127,8 @@
         border: 1px solid rgb(221, 223, 226);
     }
 
+    #deletion-prompt {
+        width: 400px;
+        margin-left: -200px;
+    }
 }
