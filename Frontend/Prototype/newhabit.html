@@ -1,0 +1,55 @@
+<head>
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/newhabit.css" rel="stylesheet"/>
+    <title>Journey</title>
+</head>
+
+<body>
+    <div class="sider">
+            <img class="logo" src="images/logo.svg" alt="Logo">
+            <ul class="main-menu">
+                <li><button class="main-menu-button"><img src="images/home.svg" alt="Home"><span>Home</span></button></li>
+                <li><button class="main-menu-button"><img src="images/users.svg" alt="Users"><span>Friends</span></button></li>
+                <li><button class="main-menu-button"><img src="images/leaf.svg" alt="Journey"><span>Your Journey</span></button></li>
+            </ul>
+            <button class="new-habit">
+                    <img class="plus" src="images/plus.svg" alt="Plus">
+            </button>
+    </div>
+    
+    <div class="content">
+        <div class="sider-element"></div>
+        <div class="container">
+            <form id="create-habit" action="newhabit.html" method="post">
+                <h1 class="page-title">New habit</h1>
+                <label class="label" for="name">Habit name:</label>
+                <input class="text-input" type="text" id="name" name="habit_name">
+                <label class="label" for="interval">Interval:</label>
+                <div class="radio-button-list">
+                    <label class="radio-button">
+                            <div class="button-text"><input class="js-button" type="radio" id="daily" value="daily" name="habit_interval"><span class="radio-label">Daily</span></div>
+                    </label>
+                    <label class="radio-button">
+                            <div class="button-text"><input class="js-button" type="radio" id="weekly" value="weekly" name="habit_interval"><span class="radio-label">Weekly</span></div>
+                    </label>
+                    <label class="radio-button">
+                            <div class="button-text"><input class="js-button" type="radio" id="monthly" value="monthly" name="habit_interval"><span class="radio-label">Monthly</span></div>
+                    </label>
+                    <label class="radio-button">
+                            <div class="button-text"><input class="js-button" type="radio" id="custom" value="custom" name="habit_interval"><class="radio-label">Custom</span></div>
+                    </label>
+                </div>
+                <button id="submit-button" type="submit"><img src="images/checkmark.svg"></button>
+            </form>
+        </div>
+    </div>
+    
+    
+    <footer class="main-footer">
+        <span class="copyright">Journey &copy; 2018</span>
+    </footer>
+
+    <script src="js/selection_color.js"></script> 
+    
+    </body>

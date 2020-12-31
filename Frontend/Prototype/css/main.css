@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: black;
+    background-color: rgb(233, 235, 238);
+
+}
+
+/* Element styles */
+button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Sider and menu */
+.sider {
+    display: none;
+}
+
+.logo {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+}
+
+.new-habit { /* Too hardcoded */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 30px;
+}
+
+.plus {
+    width: 50px;
+}
+
+.main-menu {
+    margin-top: 2em;
+}
+
+.main-menu li {
+    margin-bottom: 1em;
+}
+
+.main-menu-button {
+    display: flex;
+}
+
+.main-menu-button img {
+    width: 22px;
+}
+
+.main-menu-button span {
+    color: white;
+    margin-left: 20px;
+    font-size: 14px;
+    align-self: center;
+}
+
+.main-footer {
+    display: none;
+}
+
+/* Media Queries */
+@media (min-width: 769px) {
+    .container {
+       flex-grow: 1;
+    }
+    
+    .main-footer {
+        display: inherit;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 2em 0;
+        background: #d9e4ea;
+    }
+
+    .sider {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        height: 93%;
+        width: 230px;
+        top: 0;
+        left: 0;
+        background-color: rgb(104, 212, 108); /* Green */
+    }
+
+    .sider-element {
+        flex-basis: 230px;
+        display: inline-block;
+        height: 100%;
+    }
+
+    .content {
+        display: flex;
+        width: 100%;
+    }
+}

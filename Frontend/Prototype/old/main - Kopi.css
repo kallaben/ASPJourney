@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: black;
+    background-color: rgb(233, 235, 238);
+}
+
+/* Element styles */
+button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+.sider {
+    display: none;
+}
+
+.new-habit {
+    height: 5em;
+    width: 5em;
+    margin: auto;
+    margin-top: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: relative;
+}
+.plus {
+    position: absolute;
+    top: -13%;
+    left: 9.25%;
+    color: white;
+    margin: auto;
+    font-size: 5em;
+}
+
+.main-menu {
+    margin-top: 2em;
+    list-style-type: none;
+}
+
+.main-menu li {
+    color: white;
+    margin-bottom: 1em;
+}
+
+.habit-overview {
+    width: 100%;
+}
+
+/* Habit box styling */
+.habit {
+    background-color: white;
+    display: flex;
+    padding: 10px 10px;
+    padding-right: 5px;
+    width: 100%;
+}
+
+.habit-name {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.habit-count {
+    margin: 0;
+    font-size: 10px;
+    font-style: italic;
+    color: grey;
+}
+
+.habit-right {
+    display: flex;
+    margin-left: auto;
+}
+
+.habit-right button {
+    padding: 5px;
+    border: 1px solid rgb(221, 223, 226);
+    background-color: rgb(104, 212, 108);
+    margin-left: 5px;
+}
+
+.habit-friends {
+    border-radius: 5px;
+    align-self: flex-end;
+    height: 35px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.habit-profile-pic {
+    padding: 0;
+    margin: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 1px solid PaleGreen;
+    flex:1 1 auto;
+    margin: 0 3px;
+}
+
+.habit-stats {
+    align-self: flex-end;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.habit-stats img {
+    width: 17px;
+    height: 17px;
+    margin: auto;
+}
+
+.habit-complete {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.habit-complete img {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+}
+
+.main-footer {
+    display: none;
+}
+
+/* Media Queries */
+@media (min-width: 769px) {
+    .container {
+        display: flex;
+        margin-left: 10em;
+        width: 80%;
+    }
+    .habit-overview {
+        margin-top: 20px;
+        margin-left: auto;
+        max-width: 700px;
+    }
+    
+    .habit {
+        border: 1px solid rgb(221, 223, 226);
+    }
+
+    .main-footer {
+        display: inherit;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 2em 0;
+        background: #d9e4ea;
+    }
+
+    .sider {
+        display: inherit;
+        position: fixed;
+        height: 100%;
+        width: 10em;
+        top: 0;
+        background-color: rgb(104, 212, 108); /* Green */
+        box-shadow: 1px 2px 8px 1px #888888;
+    }
+
+    /* Clearfix for expanding containers to hold floats */
+
+}
